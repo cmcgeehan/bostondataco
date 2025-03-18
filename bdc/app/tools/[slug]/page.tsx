@@ -197,6 +197,17 @@ const getToolData = (slug: string) => {
   return tools[slug as keyof typeof tools]
 }
 
+export function generateStaticParams() {
+  // These should match the keys in your getToolData function
+  return [
+    { slug: 'sigma-analytics' },
+    { slug: 'dbt' },
+    { slug: 'snowflake' },
+    { slug: 'fivetran' },
+    { slug: 'bigquery' },
+  ]
+}
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {

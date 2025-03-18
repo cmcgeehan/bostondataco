@@ -1,9 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, ArrowRight, Database, Play } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Header } from "@/components/Header"
 
 export default function CaseStudies() {
   // Sample case studies data
@@ -107,42 +107,7 @@ export default function CaseStudies() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl text-[#343e53]">
-            <Link href="/">
-              <div className="flex items-center gap-2">
-                <Database className="h-5 w-5" />
-                <span>Boston Data Co.</span>
-              </div>
-            </Link>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/#services" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Services
-            </Link>
-            <Link href="/#about" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              About
-            </Link>
-            <Link href="/#clients" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Clients
-            </Link>
-            <Link
-              href="/case-studies"
-              className="text-sm font-medium text-[#343e53] hover:text-[#343e53]/80 transition-colors"
-            >
-              Case Studies
-            </Link>
-            <Link href="/#testimonials" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Testimonials
-            </Link>
-            <Link href="/#contact" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <Button className="bg-[#343e53] hover:bg-[#343e53]/90">Get Started</Button>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-[#343e53]">

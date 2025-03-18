@@ -1,35 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, BarChart3, Database, LineChart, Users } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
+import { Header } from "@/components/Header"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl text-[#343e53]">
-            <Database className="h-5 w-5" />
-            <span>Boston Data Co.</span>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Home
-            </Link>
-            <Link href="/tools" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Tools
-            </Link>
-            <Link href="/industries" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Industries
-            </Link>
-            <Link href="/case-studies" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Case Studies
-            </Link>
-          </nav>
-          <Button className="bg-[#343e53] hover:bg-[#343e53]/90">Get Started</Button>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
@@ -44,7 +22,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-[#343e53] hover:bg-[#343e53]/90">
+                  <Button className="bg-[#34495E] hover:bg-[#34495E]/90">
                     Schedule a Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -71,7 +49,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#343e53]/10 px-3 py-1 text-sm text-[#343e53]">
+                <div className="inline-block rounded-lg bg-[#34495E]/10 px-3 py-1 text-sm text-[#34495E]">
                   Our Services
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
@@ -86,27 +64,27 @@ export default function Home() {
               <div className="relative group overflow-hidden rounded-xl border bg-background p-6 shadow-lg transition-all hover:shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative space-y-4">
-                  <Database className="h-10 w-10 text-[#343e53]" />
+                  <Database className="h-10 w-10 text-[#34495E]" />
                   <h3 className="text-2xl font-bold">Data Buildout</h3>
                   <p className="text-muted-foreground">
-                    We take your data infrastructure from 0 to 1, or 1 to 2, implementing our &quot;modern data special&quot;
+                    We take your data infrastructure from 0 to 1, or 1 to 2, implementing our "modern data special"
                     stack:
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
-                      <div className="mr-2 h-1 w-1 rounded-full bg-[#343e53]"></div>
+                      <div className="mr-2 h-1 w-1 rounded-full bg-[#34495E]"></div>
                       <span>Stitch for data integration</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="mr-2 h-1 w-1 rounded-full bg-[#343e53]"></div>
+                      <div className="mr-2 h-1 w-1 rounded-full bg-[#34495E]"></div>
                       <span>Snowflake for cloud data warehousing</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="mr-2 h-1 w-1 rounded-full bg-[#343e53]"></div>
+                      <div className="mr-2 h-1 w-1 rounded-full bg-[#34495E]"></div>
                       <span>DBT for data transformation</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="mr-2 h-1 w-1 rounded-full bg-[#343e53]"></div>
+                      <div className="mr-2 h-1 w-1 rounded-full bg-[#34495E]"></div>
                       <span>Sigma for business intelligence</span>
                     </li>
                   </ul>
@@ -118,22 +96,22 @@ export default function Home() {
               <div className="relative group overflow-hidden rounded-xl border bg-background p-6 shadow-lg transition-all hover:shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative space-y-4">
-                  <Users className="h-10 w-10 text-[#343e53]" />
+                  <Users className="h-10 w-10 text-[#34495E]" />
                   <h3 className="text-2xl font-bold">Fractional Data Support</h3>
                   <p className="text-muted-foreground">
-                    Ongoing support with your business&apos;s data needs, available in flexible arrangements:
+                    Ongoing support with your business's data needs, available in flexible arrangements:
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
-                      <div className="mr-2 h-1 w-1 rounded-full bg-[#343e53]"></div>
+                      <div className="mr-2 h-1 w-1 rounded-full bg-[#34495E]"></div>
                       <span>1/4 FTE equivalent support</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="mr-2 h-1 w-1 rounded-full bg-[#343e53]"></div>
+                      <div className="mr-2 h-1 w-1 rounded-full bg-[#34495E]"></div>
                       <span>1/2 FTE equivalent support</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="mr-2 h-1 w-1 rounded-full bg-[#343e53]"></div>
+                      <div className="mr-2 h-1 w-1 rounded-full bg-[#34495E]"></div>
                       <span>Full FTE equivalent support</span>
                     </li>
                   </ul>
@@ -152,13 +130,13 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-[#343e53]/10 px-3 py-1 text-sm text-[#343e53]">
+                  <div className="inline-block rounded-lg bg-[#34495E]/10 px-3 py-1 text-sm text-[#34495E]">
                     About Us
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Founded on Data-Driven Principles</h2>
-                  <blockquote className="border-l-4 border-[#343e53] pl-4 italic text-muted-foreground">
-                    &quot;We&apos;re big believers in the power of data, and that every organization should be making decisions
-                    informed by accurate and insightful data.&quot;
+                  <blockquote className="border-l-4 border-[#34495E] pl-4 italic text-muted-foreground">
+                    "We're big believers in the power of data, and that every organization should be making decisions
+                    informed by accurate and insightful data."
                   </blockquote>
                 </div>
                 <p className="text-muted-foreground">
@@ -185,47 +163,14 @@ export default function Home() {
               </div>
               <div className="relative mt-8 lg:mt-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
-                <div className="relative grid grid-cols-2 gap-4">
-                  <div className="grid gap-4">
-                    <div className="overflow-hidden rounded-lg">
-                      <Image
-                        src="/sigmaexample.png"
-                        width={400}
-                        height={300}
-                        alt="Data team collaboration"
-                        className="aspect-[3/4] h-full w-full object-cover"
-                      />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                      <Image
-                        src="/sigmaexample.png"
-                        width={300}
-                        height={300}
-                        alt="Data visualization"
-                        className="aspect-square h-full w-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid gap-4">
-                    <div className="overflow-hidden rounded-lg">
-                      <Image
-                        src="/sigmaexample.png"
-                        width={300}
-                        height={300}
-                        alt="Team meeting"
-                        className="aspect-square h-full w-full object-cover"
-                      />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                      <Image
-                        src="/sigmaexample.png"
-                        width={400}
-                        height={300}
-                        alt="Data dashboard"
-                        className="aspect-[3/4] h-full w-full object-cover"
-                      />
-                    </div>
-                  </div>
+                <div className="relative overflow-hidden rounded-lg">
+                  <Image
+                    src="/sigmaexample.png"
+                    width={500}
+                    height={600}
+                    alt="Dave Aaron - Founder & CEO"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -236,12 +181,12 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#343e53]/10 px-3 py-1 text-sm text-[#343e53]">
+                <div className="inline-block rounded-lg bg-[#34495E]/10 px-3 py-1 text-sm text-[#34495E]">
                   Our Clients
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Trusted by Innovative Companies</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  We&apos;ve helped businesses across industries harness the power of their data.
+                  We've helped businesses across industries harness the power of their data.
                 </p>
               </div>
             </div>
@@ -257,10 +202,10 @@ export default function Home() {
                 <div key={i} className="flex items-center justify-center">
                   <Image
                     src={client.logo}
-                    width={160}
-                    height={80}
+                    width={300}
+                    height={150}
                     alt={`${client.name} logo`}
-                    className="h-12 w-auto object-contain opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                    className="h-24 w-auto object-contain opacity-70 transition-all hover:opacity-100"
                   />
                 </div>
               ))}
@@ -272,12 +217,12 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#343e53]/10 px-3 py-1 text-sm text-[#343e53]">
+                <div className="inline-block rounded-lg bg-[#34495E]/10 px-3 py-1 text-sm text-[#34495E]">
                   Testimonials
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">What Our Clients Say</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with Boston Data
+                  Don't just take our word for it. Here's what our clients have to say about working with Boston Data
                   Co.
                 </p>
               </div>
@@ -291,7 +236,7 @@ export default function Home() {
                   logo: "/logos/abridge.avif"
                 },
                 {
-                  quote: "Dave and the Boston Data Company are everything that you want in an agency. They are proactive, they are extremely smart. I could not be happier with my decision to work with them to built out all of my agency&apos;s dashboards. They don&apos;t just do the work; they provide that extra layer of consultative guidance, which is so important. Couldn&apos;t say anything but great things.",
+                  quote: "Dave and the Boston Data Company are everything that you want in an agency. They are proactive, they are extremely smart. I could not be happier with my decision to work with them to built out all of my agency's dashboards. They don't just do the work; they provide that extra layer of consultative guidance, which is so important. Couldn't say anything but great things.",
                   author: "Jake Schmidt",
                   title: "CEO at Structured",
                   logo: "/logos/structured.avif"
@@ -309,7 +254,7 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative space-y-4">
-                    <div className="text-4xl text-[#343e53]/20">&quot;</div>
+                    <div className="text-4xl text-[#34495E]/20">&quot;</div>
                     <p className="text-muted-foreground line-clamp-6 hover:line-clamp-none transition-all duration-300">{testimonial.quote}</p>
                     <div className="flex items-center gap-4 pt-4">
                       <Image
@@ -335,12 +280,12 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#343e53]/10 px-3 py-1 text-sm text-[#343e53]">
+                <div className="inline-block rounded-lg bg-[#34495E]/10 px-3 py-1 text-sm text-[#34495E]">
                   Case Studies
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Our Work in Action</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  See how we&apos;ve helped businesses transform their data infrastructure and decision-making processes.
+                  See how we've helped businesses transform their data infrastructure and decision-making processes.
                 </p>
               </div>
               <div className="flex items-center gap-2 pt-4">
@@ -394,7 +339,7 @@ export default function Home() {
                       className="h-full w-full object-cover transition-transform group-hover:scale-105"
                     />
                     <div className="absolute bottom-3 left-3 z-20 flex gap-2">
-                      <span className="inline-block rounded-full bg-[#343e53]/90 px-2.5 py-0.5 text-xs font-medium text-white">
+                      <span className="inline-block rounded-full bg-[#34495E]/90 px-2.5 py-0.5 text-xs font-medium text-white">
                         {study.industry}
                       </span>
                     </div>
@@ -407,7 +352,7 @@ export default function Home() {
                         <div className="mt-4 grid grid-cols-3 gap-4">
                           {study.metrics.map((metric, i) => (
                             <div key={i} className="text-center">
-                              <div className="text-lg font-bold text-[#343e53]">{metric.value}</div>
+                              <div className="text-lg font-bold text-[#34495E]">{metric.value}</div>
                               <div className="text-xs text-muted-foreground">{metric.label}</div>
                             </div>
                           ))}
@@ -423,7 +368,7 @@ export default function Home() {
                         </div>
                       )}
                       {study.testimonial && (
-                        <blockquote className="mt-4 border-l-2 border-[#343e53]/20 pl-4 italic text-sm text-muted-foreground">
+                        <blockquote className="mt-4 border-l-2 border-[#34495E]/20 pl-4 italic text-sm text-muted-foreground">
                           &quot;{study.testimonial.quote}&quot;
                           <footer className="mt-2 text-xs font-medium">
                             {study.testimonial.author}, {study.testimonial.role}
@@ -432,7 +377,7 @@ export default function Home() {
                       )}
                     </div>
                     <div className="mt-6 flex items-center">
-                      <Link href="#" className="text-sm font-medium text-[#343e53] hover:underline">
+                      <Link href="#" className="text-sm font-medium text-[#34495E] hover:underline">
                         Read Case Study
                         <ArrowRight className="ml-1 inline-block h-4 w-4" />
                       </Link>
@@ -444,13 +389,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-[#343e53] text-white">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-[#34495E] text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Ready to Transform Your Data?</h2>
                 <p className="max-w-[900px] text-white/80 md:text-xl">
-                  If you&apos;re looking to establish your data practice or enhance your existing one, we&apos;d love to hear from
+                  If you're looking to establish your data practice or enhance your existing one, we'd love to hear from
                   you.
                 </p>
               </div>
@@ -469,7 +414,7 @@ export default function Home() {
                     className="flex min-h-[120px] w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
                     placeholder="Tell us about your data needs"
                   ></textarea>
-                  <Button className="bg-white text-[#343e53] hover:bg-white/90">
+                  <Button className="bg-white text-[#34495E] hover:bg-white/90">
                     Send Message
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -479,85 +424,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">What We Do</h2>
-                  <p className="text-muted-foreground">
-                    We believe that data should be accessible, actionable, and drive real business outcomes.
-                  </p>
-                </div>
-                <div className="grid gap-4 md:grid-cols-2">
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#343e53]/10">
-                      <BarChart3 className="h-6 w-6 text-[#343e53]" />
-                    </div>
-                    <h3 className="font-bold">Build Your Data Architecture</h3>
-                    <p className="text-sm text-muted-foreground">
-                      We help you develop a comprehensive data strategy aligned with your business goals.
-                    </p>
-                  </div>
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#343e53]/10">
-                      <Database className="h-6 w-6 text-[#343e53]" />
-                    </div>
-                    <h3 className="font-bold">Create Your Reporting Foundation</h3>
-                    <p className="text-sm text-muted-foreground">
-                    From evaluating your existing data infrastructure to implementing the best in class ETL, Data Warehousing, and Business Intelligence tools, we build the data backbone your business needs for success.
-                    </p>
-                  </div>
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#343e53]/10">
-                      <LineChart className="h-6 w-6 text-[#343e53]" />
-                    </div>
-                    <h3 className="font-bold">Expand Your Analytics</h3>
-                    <p className="text-sm text-muted-foreground">
-                    Once the foundation is built, we&apos;ll help take your analytics to the next level. From identifying users about to churn, forecasting units sold, or automating your business review reporting- the possibilities are endless!
-                    </p>
-                  </div>
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#343e53]/10">
-                      <Users className="h-6 w-6 text-[#343e53]" />
-                    </div>
-                    <h3 className="font-bold">Augment Your Team</h3>
-                    <p className="text-sm text-muted-foreground">
-                    Our talented team of Analytics Engineers and BI professionals plug into your team and accelerate your roadmap.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="relative mt-8 lg:mt-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
-                <div className="relative rounded-xl overflow-hidden border shadow-xl">
-                  <Image
-                    src="/sigmaexample.png"
-                    width={800}
-                    height={600}
-                    alt="Data visualization dashboard"
-                    className="w-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </main>
       <footer className="w-full border-t bg-slate-50 py-6 md:py-12">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row px-4 md:px-6">
-          <div className="flex items-center gap-2 font-bold text-xl text-[#343e53]">
-            <Database className="h-5 w-5" />
-            <span>Boston Data Co.</span>
+          <div className="font-bold text-xl text-[#34495E]">
+            Boston Data Co.
           </div>
           <p className="text-center text-sm text-muted-foreground md:text-left">
             &copy; {new Date().getFullYear()} Boston Data Company. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
+            <Link href="#" className="text-sm font-medium hover:text-[#34495E]/80 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
+            <Link href="#" className="text-sm font-medium hover:text-[#34495E]/80 transition-colors">
               Terms of Service
             </Link>
           </div>

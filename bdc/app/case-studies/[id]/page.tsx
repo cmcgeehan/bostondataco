@@ -4,111 +4,136 @@ import type { Metadata } from 'next'
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Database, Play } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
+import { Header } from "@/components/Header"
 
 // This would typically come from a database or CMS
 const getCaseStudy = (id: string) => {
   const caseStudies = [
     {
-      id: "ecommerce-analytics",
-      title: "E-commerce Analytics Transformation",
-      description: "How we helped an online retailer increase conversion by 32% through data-driven insights.",
-      industry: "E-commerce",
-      image: "/placeholder.svg?height=600&width=1200",
+      id: "sigma-analytics",
+      title: "Sigma Analytics Implementation",
+      description: "How we helped a data-driven company unlock insights with Sigma's cloud-native analytics platform.",
+      industry: "Analytics",
+      image: "/case-studies/sigma-analytics.jpg",
       challenge:
-        "A rapidly growing e-commerce company was struggling to make sense of their customer data across multiple platforms. Their marketing team couldn't identify which channels were most effective, and their product team lacked insights into customer behavior.",
+        "A growing company needed a modern analytics solution that could handle their complex data needs while remaining accessible to business users. Traditional BI tools were too rigid and required extensive technical knowledge.",
       solution:
-        "We implemented our modern data special stack (Stitch, Snowflake, DBT, and Sigma) to create a unified view of customer data. We built custom dashboards for marketing attribution, product performance, and customer journey analysis.",
+        "We implemented Sigma Analytics, connecting it to their Snowflake data warehouse. We created custom worksheets and dashboards that enabled business users to explore data freely while maintaining governance.",
       results: [
-        "32% increase in conversion rate within 3 months",
-        "45% reduction in customer acquisition costs",
-        "85% faster reporting process, from days to hours",
-        "Enabled real-time decision making during promotional events",
+        "90% reduction in time-to-insight for business users",
+        "Eliminated backlog of analytics requests to data team",
+        "Enabled self-service analytics across departments",
+        "Improved data-driven decision making company-wide",
       ],
       testimonial: {
         quote:
-          "Boston Data Co. transformed how we understand our customers. We now have clear visibility into what's working and what's not, allowing us to make data-driven decisions that have significantly improved our bottom line.",
-        author: "Sarah Johnson",
-        title: "CMO, E-commerce Retailer",
+          "Sigma has transformed how our entire organization interacts with data. The implementation by Boston Data Co. was smooth and their training ensured high adoption across teams.",
+        author: "Alex Chen",
+        title: "Director of Analytics",
       },
       videoUrl: "#",
-      dashboardImage: "/placeholder.svg?height=800&width=1200",
+      dashboardImage: "/case-studies/sigma-dashboard.jpg",
     },
     {
-      id: "healthcare-infrastructure",
-      title: "Healthcare Data Infrastructure",
-      description: "Building a HIPAA-compliant data warehouse that reduced reporting time by 85%.",
-      industry: "Healthcare",
-      image: "/placeholder.svg?height=600&width=1200",
+      id: "dbt-implementation",
+      title: "dbt Data Transformation",
+      description: "Modernizing data transformation processes with dbt for improved efficiency and reliability.",
+      industry: "Data Engineering",
+      image: "/case-studies/dbt-implementation.jpg",
       challenge:
-        "A healthcare provider was struggling with fragmented patient data across multiple systems. Compliance reporting was manual and time-consuming, and they lacked the ability to analyze patient outcomes effectively.",
+        "A company was struggling with complex, hard-to-maintain SQL scripts for their data transformations. Documentation was poor and there was no version control for data models.",
       solution:
-        "We designed and implemented a HIPAA-compliant data warehouse using Snowflake, with automated ETL processes through Stitch. We created secure dashboards for clinical staff and administrators, with role-based access controls.",
+        "We implemented dbt to modernize their data transformation process, creating modular, well-documented data models with proper testing and version control.",
       results: [
-        "85% reduction in time spent on compliance reporting",
-        "Enabled predictive analytics for patient readmission risk",
-        "Improved resource allocation, saving an estimated $1.2M annually",
-        "Created a unified patient view across all departments",
+        "75% reduction in data transformation errors",
+        "Automated testing of data quality",
+        "Complete documentation of data lineage",
+        "Faster onboarding of new data team members",
       ],
       testimonial: {
         quote:
-          "The data infrastructure Boston Data Co. built has transformed our operations. We're now able to focus on patient care instead of wrestling with spreadsheets, and our compliance team has never been happier.",
-        author: "Dr. Michael Chen",
-        title: "CIO, Healthcare Provider",
+          "The move to dbt has been revolutionary for our data team. Our transformations are now reliable, documented, and easy to maintain.",
+        author: "Sarah Martinez",
+        title: "Lead Data Engineer",
       },
       videoUrl: "#",
-      dashboardImage: "/placeholder.svg?height=800&width=1200",
+      dashboardImage: "/case-studies/dbt-models.jpg",
     },
     {
-      id: "saas-customer-insights",
-      title: "SaaS Customer Insights Platform",
-      description: "Creating a unified view of customer data that improved retention rates by 24%.",
-      industry: "SaaS",
-      image: "/placeholder.svg?height=600&width=1200",
+      id: "snowflake-migration",
+      title: "Snowflake Cloud Migration",
+      description: "Successful migration from legacy data warehouse to Snowflake's modern cloud platform.",
+      industry: "Cloud Infrastructure",
+      image: "/case-studies/snowflake-migration.jpg",
       challenge:
-        "A B2B SaaS company was experiencing higher than industry-average churn rates. They had data in multiple systems (CRM, product analytics, support tickets) but no way to connect these dots to understand the customer journey and identify at-risk accounts.",
+        "A company was facing performance and scalability issues with their on-premise data warehouse. Costs were high and query performance was poor.",
       solution:
-        "We built a customer 360 platform that integrated data from all customer touchpoints. We implemented predictive churn models and created early warning systems for the customer success team. Custom dashboards were created for executives, sales, and customer success teams.",
+        "We planned and executed a phased migration to Snowflake, optimizing data models and implementing proper data governance along the way.",
       results: [
-        "24% improvement in customer retention within 6 months",
-        "Identified key product usage patterns correlated with long-term success",
-        "Enabled proactive outreach to at-risk customers before they churned",
-        "Increased average contract value by 18% through better upsell targeting",
+        "60% reduction in infrastructure costs",
+        "95% improvement in query performance",
+        "Zero downtime during migration",
+        "Enabled multi-cloud strategy",
       ],
       testimonial: {
         quote:
-          "The customer insights platform has been a game-changer for our business. We can now see exactly which customers need attention and why, allowing our customer success team to be much more strategic and effective.",
-        author: "Jessica Williams",
-        title: "VP of Customer Success, SaaS Company",
+          "The migration to Snowflake was seamless thanks to Boston Data Co. We're now seeing better performance at lower costs.",
+        author: "Michael Lee",
+        title: "VP of Engineering",
       },
       videoUrl: "#",
-      dashboardImage: "/placeholder.svg?height=800&width=1200",
+      dashboardImage: "/case-studies/snowflake-dashboard.jpg",
     },
     {
-      id: "fintech-data-modernization",
-      title: "FinTech Data Modernization",
-      description: "Modernizing a legacy data system to enable real-time financial analytics and reporting.",
-      industry: "FinTech",
-      image: "/placeholder.svg?height=600&width=1200",
+      id: "fivetran-etl",
+      title: "Fivetran ETL Implementation",
+      description: "Automating data pipelines with Fivetran for real-time analytics.",
+      industry: "Data Integration",
+      image: "/case-studies/fivetran-etl.jpg",
       challenge:
-        "A financial technology company was relying on outdated data systems that couldn't handle their growing data volume. Reports were slow, often inaccurate, and the team spent more time maintaining the system than analyzing data.",
+        "Manual data integration processes were causing delays in reporting and analysis. Engineers spent too much time maintaining custom ETL scripts.",
       solution:
-        "We migrated their legacy data warehouse to a modern cloud architecture using Snowflake. We implemented streaming data pipelines for real-time analytics and redesigned their data models using DBT for better performance and maintainability.",
+        "We implemented Fivetran to automate data integration from multiple sources, ensuring reliable and timely data delivery to their warehouse.",
       results: [
-        "97% reduction in report generation time",
-        "Enabled real-time fraud detection capabilities",
-        "Reduced infrastructure costs by 40%",
-        "Empowered business users to create their own reports without IT assistance",
+        "100% automation of data pipelines",
+        "Real-time data availability",
+        "Reduced engineering maintenance time by 80%",
+        "Improved data reliability and freshness",
       ],
       testimonial: {
         quote:
-          "Boston Data Co. took us from the data dark ages to the cutting edge in just a few months. Our team is now focused on finding insights rather than fighting with our systems, and the business impact has been tremendous.",
-        author: "Robert Chang",
-        title: "CTO, FinTech Company",
+          "Fivetran has eliminated our data integration headaches. The implementation was smooth and now our data just works.",
+        author: "Lisa Wong",
+        title: "Data Operations Manager",
       },
       videoUrl: "#",
-      dashboardImage: "/placeholder.svg?height=800&width=1200",
+      dashboardImage: "/case-studies/fivetran-connectors.jpg",
+    },
+    {
+      id: "bigquery-analytics",
+      title: "BigQuery Analytics Platform",
+      description: "Building a scalable analytics platform on Google BigQuery.",
+      industry: "Cloud Analytics",
+      image: "/case-studies/bigquery-analytics.jpg",
+      challenge:
+        "A growing company needed a scalable analytics platform that could handle their increasing data volume while keeping costs predictable.",
+      solution:
+        "We architected and implemented a BigQuery-based analytics platform with optimized table structures and proper partitioning for cost control.",
+      results: [
+        "Unlimited scalability for growing data needs",
+        "40% reduction in query costs",
+        "Sub-second query response times",
+        "Improved data governance and security",
+      ],
+      testimonial: {
+        quote:
+          "BigQuery has transformed our analytics capabilities. Boston Data Co.'s implementation exceeded our expectations in both performance and cost efficiency.",
+        author: "David Kim",
+        title: "Head of Analytics",
+      },
+      videoUrl: "#",
+      dashboardImage: "/case-studies/bigquery-dashboard.jpg",
     },
   ]
 
@@ -117,10 +142,11 @@ const getCaseStudy = (id: string) => {
 
 export async function generateStaticParams() {
   return [
-    { id: "ecommerce-analytics" },
-    { id: "healthcare-infrastructure" },
-    { id: "saas-customer-insights" },
-    { id: "fintech-data-modernization" },
+    { id: "sigma-analytics" },
+    { id: "dbt-implementation" },
+    { id: "snowflake-migration" },
+    { id: "fivetran-etl" },
+    { id: "bigquery-analytics" },
   ]
 }
 
@@ -163,43 +189,7 @@ export default async function CaseStudyPage({
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl text-[#343e53]">
-            <Link href="/">
-              <div className="flex items-center gap-2">
-                <Database className="h-5 w-5" />
-                <span>Boston Data Co.</span>
-              </div>
-            </Link>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/#services" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Services
-            </Link>
-            <Link href="/#about" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              About
-            </Link>
-            <Link href="/#clients" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Clients
-            </Link>
-            <Link
-              href="/case-studies"
-              className="text-sm font-medium text-[#343e53] hover:text-[#343e53]/80 transition-colors"
-            >
-              Case Studies
-            </Link>
-            <Link href="/#testimonials" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Testimonials
-            </Link>
-            <Link href="/#contact" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <Button className="bg-[#343e53] hover:bg-[#343e53]/90">Get Started</Button>
-        </div>
-      </header>
-
+      <Header />
       <main className="flex-1">
         <div className="container px-4 py-6 md:px-6 md:py-8">
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
@@ -349,28 +339,34 @@ export default async function CaseStudyPage({
               {/* Filter out the current case study and show 3 others */}
               {[
                 {
-                  id: "ecommerce-analytics",
-                  title: "E-commerce Analytics Transformation",
-                  industry: "E-commerce",
-                  image: "/placeholder.svg?height=400&width=600",
+                  id: "sigma-analytics",
+                  title: "Sigma Analytics Implementation",
+                  industry: "Analytics",
+                  image: "/case-studies/sigma-analytics.jpg",
                 },
                 {
-                  id: "healthcare-infrastructure",
-                  title: "Healthcare Data Infrastructure",
-                  industry: "Healthcare",
-                  image: "/placeholder.svg?height=400&width=600",
+                  id: "dbt-implementation",
+                  title: "dbt Data Transformation",
+                  industry: "Data Engineering",
+                  image: "/case-studies/dbt-implementation.jpg",
                 },
                 {
-                  id: "saas-customer-insights",
-                  title: "SaaS Customer Insights Platform",
-                  industry: "SaaS",
-                  image: "/placeholder.svg?height=400&width=600",
+                  id: "snowflake-migration",
+                  title: "Snowflake Cloud Migration",
+                  industry: "Cloud Infrastructure",
+                  image: "/case-studies/snowflake-migration.jpg",
                 },
                 {
-                  id: "fintech-data-modernization",
-                  title: "FinTech Data Modernization",
-                  industry: "FinTech",
-                  image: "/placeholder.svg?height=400&width=600",
+                  id: "fivetran-etl",
+                  title: "Fivetran ETL Implementation",
+                  industry: "Data Integration",
+                  image: "/case-studies/fivetran-etl.jpg",
+                },
+                {
+                  id: "bigquery-analytics",
+                  title: "BigQuery Analytics Platform",
+                  industry: "Cloud Analytics",
+                  image: "/case-studies/bigquery-analytics.jpg",
                 },
               ]
                 .filter((study) => study.id !== resolvedParams.id)

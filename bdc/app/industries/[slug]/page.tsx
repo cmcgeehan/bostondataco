@@ -243,6 +243,17 @@ const getIndustryData = (slug: string) => {
   return industries[slug as keyof typeof industries]
 }
 
+export function generateStaticParams() {
+  // These should match the keys in your getIndustryData function
+  return [
+    { slug: 'healthcare' },
+    { slug: 'sports' },
+    { slug: 'ecommerce' },
+    { slug: 'saas' },
+    { slug: 'fintech' },
+  ]
+}
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {
