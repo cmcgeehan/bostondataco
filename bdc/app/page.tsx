@@ -55,7 +55,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
                 <div className="relative rounded-xl overflow-hidden border shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=600&width=800"
+                    src="/sigmaExample.png"
                     width={800}
                     height={600}
                     alt="Data visualization dashboard"
@@ -171,7 +171,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
+                    src="/sigmaExample.png"
                     width={64}
                     height={64}
                     alt="Dave Aaron"
@@ -189,16 +189,16 @@ export default function Home() {
                   <div className="grid gap-4">
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/placeholder.svg?height=400&width=300"
-                        width={300}
-                        height={400}
+                        src="/sigmaExample.png"
+                        width={400}
+                        height={300}
                         alt="Data team collaboration"
                         className="aspect-[3/4] h-full w-full object-cover"
                       />
                     </div>
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/placeholder.svg?height=300&width=300"
+                        src="/sigmaExample.png"
                         width={300}
                         height={300}
                         alt="Data visualization"
@@ -209,7 +209,7 @@ export default function Home() {
                   <div className="grid gap-4">
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/placeholder.svg?height=300&width=300"
+                        src="/sigmaExample.png"
                         width={300}
                         height={300}
                         alt="Team meeting"
@@ -218,9 +218,9 @@ export default function Home() {
                     </div>
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/placeholder.svg?height=400&width=300"
-                        width={300}
-                        height={400}
+                        src="/sigmaExample.png"
+                        width={400}
+                        height={300}
                         alt="Data dashboard"
                         className="aspect-[3/4] h-full w-full object-cover"
                       />
@@ -366,25 +366,11 @@ export default function Home() {
                   ],
                   stack: ["Stitch", "Fivetran", "Snowflake", "dbt Cloud", "Sigma"],
                   testimonial: {
-                    quote: "[Boston Data Co] solved data specific problems we&apos;ve been trying to solve for nearly a decade. This relationship was the unlock for our business to get the information we need to scale.",
+                    quote: "[Boston Data Co] solved data specific problems we've been trying to solve for nearly a decade. This relationship was the unlock for our business to get the information we need to scale.",
                     author: "Scott Baxter",
                     role: "CEO and Founder"
                   }
-                },
-                {
-                  title: "Healthcare Data Infrastructure",
-                  description: "Building a HIPAA-compliant data warehouse that reduced reporting time by 85%.",
-                  industry: "Healthcare",
-                  image: "/placeholder.svg?height=400&width=600",
-                  comingSoon: true
-                },
-                {
-                  title: "SaaS Customer Insights Platform",
-                  description: "Creating a unified view of customer data that improved retention rates by 24%.",
-                  industry: "SaaS",
-                  image: "/placeholder.svg?height=400&width=600",
-                  comingSoon: true
-                },
+                }
               ].map((study, i) => (
                 <div
                   key={i}
@@ -392,14 +378,12 @@ export default function Home() {
                 >
                   <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 z-10 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
-                      {!study.comingSoon && (
-                        <Button
-                          variant="outline"
-                          className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
-                        >
-                          Read Full Case Study
-                        </Button>
-                      )}
+                      <Button
+                        variant="outline"
+                        className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                      >
+                        Read Full Case Study
+                      </Button>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]"></div>
                     <Image
@@ -413,11 +397,6 @@ export default function Home() {
                       <span className="inline-block rounded-full bg-[#343e53]/90 px-2.5 py-0.5 text-xs font-medium text-white">
                         {study.industry}
                       </span>
-                      {study.comingSoon && (
-                        <span className="inline-block rounded-full bg-blue-500/90 px-2.5 py-0.5 text-xs font-medium text-white">
-                          Coming Soon
-                        </span>
-                      )}
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col justify-between p-6">
@@ -453,16 +432,10 @@ export default function Home() {
                       )}
                     </div>
                     <div className="mt-6 flex items-center">
-                      {!study.comingSoon ? (
-                        <Link href="#" className="text-sm font-medium text-[#343e53] hover:underline">
-                          Read Case Study
-                          <ArrowRight className="ml-1 inline-block h-4 w-4" />
-                        </Link>
-                      ) : (
-                        <span className="text-sm text-muted-foreground">
-                          Case study coming soon
-                        </span>
-                      )}
+                      <Link href="#" className="text-sm font-medium text-[#343e53] hover:underline">
+                        Read Case Study
+                        <ArrowRight className="ml-1 inline-block h-4 w-4" />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -559,7 +532,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
                 <div className="relative rounded-xl overflow-hidden border shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=600&width=800"
+                    src="/sigmaExample.png"
                     width={800}
                     height={600}
                     alt="Data visualization dashboard"
