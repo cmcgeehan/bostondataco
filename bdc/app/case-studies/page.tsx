@@ -172,7 +172,7 @@ export default function CaseStudies() {
                     src="/placeholder.svg?height=800&width=600"
                     width={600}
                     height={800}
-                    alt="Our data process visualization"
+                    alt="Dave Aaron"
                     className="w-full object-cover"
                   />
                 </div>

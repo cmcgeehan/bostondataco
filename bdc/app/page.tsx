@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
                 <div className="relative overflow-hidden rounded-lg">
                   <Image
-                    src="/sigmaexample.png"
+                    src="/headshots/dave_aaron.jpeg"
                     width={500}
                     height={600}
                     alt="Dave Aaron - Founder & CEO"
@@ -81,7 +81,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                   <Image
-                    src="/sigmaexample.png"
+                    src="/logos/bdc.png"
                     width={64}
                     height={64}
                     alt="Dave Aaron"
@@ -240,13 +240,13 @@ export default function Home() {
                   quote: `Dave and the Boston Data Company are everything that you want in an agency. They are proactive, they are extremely smart. I could not be happier with my decision to work with them to built out all of my agency's dashboards. They don't just do the work; they provide that extra layer of consultative guidance, which is so important. Couldn't say anything but great things.`,
                   author: `Jake Schmidt`,
                   title: `CEO at Structured`,
-                  logo: `/logos/structured.avif`
+                  logo: `/headshots/jake_schmidt.png`
                 },
                 {
                   quote: `Dave (founder of Boston Data Co) was my head of business intelligence for 2 years at Landing and is one of the best in the business. He built us a top-notch data platform from scratch and continually found insights to help propel our business forward. His technical expertise combined with his strong business acumen and ability to deliver value to stakeholders makes his services a hugely valuable asset to any organization.`,
                   author: `Casey Woo`,
                   title: `Founder & CEO at Operators Guild`,
-                  logo: `/logos/operatorsguild.jpeg`
+                  logo: `/headshots/casey_woo.jpeg`
                 },
               ].map((testimonial, i) => (
                 <div
@@ -260,12 +260,12 @@ export default function Home() {
                     <div className="flex items-center gap-4 pt-4">
                       <Image
                         src={testimonial.logo || "/placeholder.svg?height=50&width=50"}
-                        width={40}
-                        height={40}
+                        width={60}
+                        height={60}
                         alt={testimonial.author}
-                        className={`${testimonial.logo ? 'object-contain' : 'rounded-full object-cover'}`}
+                        className="rounded-full object-cover"
                       />
-                      <div>
+                      <div className="flex flex-col justify-center">
                         <h3 className="font-bold">{testimonial.author}</h3>
                         <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                       </div>
@@ -334,13 +334,15 @@ export default function Home() {
                       </Button>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]"></div>
-                    <Image
-                      src={study.image}
-                      width={600}
-                      height={400}
-                      alt={study.title}
+                    <video
+                      muted
+                      autoPlay
+                      loop
                       className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                    />
+                    >
+                      <source src="/case-studies/play_your_court.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
                     <div className="absolute bottom-3 left-3 z-20 flex gap-2">
                       <span className="inline-block rounded-full bg-[#34495E]/90 px-2.5 py-0.5 text-xs font-medium text-white">
                         {study.industry}
