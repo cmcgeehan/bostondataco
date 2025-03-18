@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft, ArrowRight, Database } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
@@ -120,9 +121,11 @@ export default function CaseStudies() {
               <div className="relative mt-8 lg:mt-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
                 <div className="relative rounded-xl overflow-hidden border shadow-xl">
-                  <img
+                  <Image
                     src="/placeholder.svg?height=800&width=600"
                     alt="Process visualization"
+                    width={600}
+                    height={800}
                     className="w-full object-cover"
                   />
                 </div>
