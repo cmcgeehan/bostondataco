@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Database } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/Header"
+import { SiteHeader } from "@/components/site-header"
 
 export default function ToolsPage() {
   const tools = [
@@ -45,7 +45,7 @@ export default function ToolsPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <SiteHeader />
 
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-[#343e53]">

@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Database, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
+import { SiteHeader } from "@/components/site-header"
 
 // This would typically come from a database or CMS
 const getCaseStudy = (id: string) => {
@@ -189,7 +189,7 @@ export default async function CaseStudyPage({
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <SiteHeader />
       <main className="flex-1">
         <div className="container px-4 py-6 md:px-6 md:py-8">
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
