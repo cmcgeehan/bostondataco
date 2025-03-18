@@ -3,7 +3,7 @@ import Image from "next/image"
 import { ArrowLeft, ArrowRight, Database, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Header } from "@/components/Header"
+import { Header } from "@/components/header"
 
 export default function CaseStudies() {
   // Sample case studies data
@@ -110,7 +110,7 @@ export default function CaseStudies() {
       <Header />
 
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#343e53]">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center text-white">
               <div className="space-y-2">
@@ -125,7 +125,7 @@ export default function CaseStudies() {
               </div>
               <div className="flex items-center gap-2 pt-4">
                 <Link href="/#contact">
-                  <Button className="bg-white text-[#343e53] hover:bg-white/90">
+                  <Button className="bg-white text-primary hover:bg-white/90">
                     Start Your Success Story
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -138,68 +138,50 @@ export default function CaseStudies() {
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="mb-10">
-              <Tabs defaultValue="All" className="w-full">
-                <div className="flex justify-center mb-8">
-                  <TabsList className="bg-slate-100">
-                    {industries.map((industry) => (
-                      <TabsTrigger key={industry} value={industry} className="px-4 py-2">
-                        {industry}
-                      </TabsTrigger>
-                    ))}
-                  </TabsList>
-                </div>
-
-                {industries.map((industry) => (
-                  <TabsContent key={industry} value={industry} className="mt-0">
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                      {caseStudies
-                        .filter((study) => industry === "All" || study.industry === industry)
-                        .map((study) => (
-                          <Link href={`/case-studies/${study.id}`} key={study.id}>
-                            <div className="group relative flex flex-col overflow-hidden rounded-lg border bg-background shadow-md transition-all hover:shadow-xl">
-                              <div className="relative aspect-video overflow-hidden">
-                                <div className="absolute inset-0 z-10 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
-                                  <Button
-                                    variant="outline"
-                                    className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
-                                  >
-                                    <Play className="mr-2 h-4 w-4" />
-                                    Watch Video
-                                  </Button>
-                                </div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]"></div>
-                                <Image
-                                  src={study.image || "/placeholder.svg"}
-                                  width={600}
-                                  height={400}
-                                  alt={study.title}
-                                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                                />
-                                <div className="absolute bottom-3 left-3 z-20">
-                                  <span className="inline-block rounded-full bg-[#343e53]/90 px-2.5 py-0.5 text-xs font-medium text-white">
-                                    {study.industry}
-                                  </span>
-                                </div>
-                              </div>
-                              <div className="flex flex-1 flex-col justify-between p-6">
-                                <div>
-                                  <h3 className="text-xl font-bold">{study.title}</h3>
-                                  <p className="mt-2 text-sm text-muted-foreground">{study.description}</p>
-                                </div>
-                                <div className="mt-6 flex items-center">
-                                  <span className="text-sm font-medium text-[#343e53] group-hover:underline">
-                                    Read Case Study
-                                  </span>
-                                  <ArrowRight className="ml-1 h-4 w-4 text-[#343e53]" />
-                                </div>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {caseStudies.map((study) => (
+                  <Link href={`/case-studies/${study.id}`} key={study.id}>
+                    <div className="group relative flex flex-col overflow-hidden rounded-lg border bg-background shadow-md transition-all hover:shadow-xl">
+                      <div className="relative aspect-video overflow-hidden">
+                        <div className="absolute inset-0 z-10 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
+                          <Button
+                            variant="outline"
+                            className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                          >
+                            <Play className="mr-2 h-4 w-4" />
+                            Watch Video
+                          </Button>
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]"></div>
+                        <Image
+                          src={study.image || "/placeholder.svg"}
+                          width={600}
+                          height={400}
+                          alt={study.title}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                        />
+                        <div className="absolute bottom-3 left-3 z-20">
+                          <span className="inline-block rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-medium text-white">
+                            {study.industry}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex flex-1 flex-col justify-between p-6">
+                        <div>
+                          <h3 className="text-xl font-bold">{study.title}</h3>
+                          <p className="mt-2 text-sm text-muted-foreground">{study.description}</p>
+                        </div>
+                        <div className="mt-6 flex items-center">
+                          <span className="text-sm font-medium text-primary group-hover:underline">
+                            Read Case Study
+                          </span>
+                          <ArrowRight className="ml-1 h-4 w-4 text-primary" />
+                        </div>
+                      </div>
                     </div>
-                  </TabsContent>
+                  </Link>
                 ))}
-              </Tabs>
+              </div>
             </div>
           </div>
         </section>
@@ -209,7 +191,7 @@ export default function CaseStudies() {
             <div className="grid gap-6 lg:grid-cols-[2fr_1fr] lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-[#343e53]/10 px-3 py-1 text-sm text-[#343e53]">
+                  <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
                     Our Process
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">How We Deliver Results</h2>
@@ -251,7 +233,7 @@ export default function CaseStudies() {
                     },
                   ].map((step) => (
                     <div key={step.step} className="flex gap-4">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#343e53] text-white">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white">
                         {step.step}
                       </div>
                       <div className="space-y-1">
@@ -289,7 +271,7 @@ export default function CaseStudies() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
                 <Link href="/#contact">
-                  <Button className="bg-[#343e53] hover:bg-[#343e53]/90">
+                  <Button className="bg-primary hover:bg-primary/90">
                     Contact Us
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -308,7 +290,7 @@ export default function CaseStudies() {
 
       <footer className="w-full border-t bg-slate-50 py-6 md:py-12">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row px-4 md:px-6">
-          <div className="flex items-center gap-2 font-bold text-xl text-[#343e53]">
+          <div className="flex items-center gap-2 font-bold text-xl text-primary">
             <Database className="h-5 w-5" />
             <span>Boston Data Co.</span>
           </div>
@@ -316,10 +298,10 @@ export default function CaseStudies() {
             &copy; {new Date().getFullYear()} Boston Data Company. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
+            <Link href="#" className="text-sm font-medium hover:text-primary/80 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-[#343e53]/80 transition-colors">
+            <Link href="#" className="text-sm font-medium hover:text-primary/80 transition-colors">
               Terms of Service
             </Link>
           </div>

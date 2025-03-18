@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Database, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/Header"
+import { Header } from "@/components/header"
 
 // This would typically come from a database or CMS
 const getCaseStudy = (id: string) => {

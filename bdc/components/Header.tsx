@@ -24,17 +24,14 @@ export function Header() {
           <Link href="/tools" className="text-sm font-medium text-white hover:text-white/80 transition-colors">
             Tools
           </Link>
-          <Link href="/industries" className="text-sm font-medium text-white hover:text-white/80 transition-colors">
-            Industries
-          </Link>
-          <Link href="/case-studies" className="text-sm font-medium text-white hover:text-white/80 transition-colors">
+          <Link href="/#case-studies" className="text-sm font-medium text-white hover:text-white/80 transition-colors">
             Case Studies
           </Link>
           <Link href="/#contact" className="text-sm font-medium text-white hover:text-white/80 transition-colors">
             Contact
           </Link>
         </nav>
-        <Button className="bg-white text-[#34495E] hover:bg-white/90">Get Started</Button>
+        <Button className="bg-white text-[#34495E] hover:bg-white/90">Contact Us</Button>
       </div>
     </header>
   )

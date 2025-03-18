@@ -2,14 +2,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, BarChart3, Database, LineChart, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/Header"
+import { Header } from "@/components/header"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-8 md:py-16 lg:py-24 xl:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section id="services" className="w-full py-8 md:py-16 lg:py-20 bg-slate-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="about" className="w-full py-8 md:py-16 lg:py-20">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
@@ -177,7 +177,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="clients" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section id="clients" className="w-full py-8 md:py-16 lg:py-20 bg-slate-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="testimonials" className="w-full py-8 md:py-16 lg:py-20">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -276,7 +276,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="case-studies" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section id="case-studies" className="w-full py-8 md:py-16 lg:py-20 bg-slate-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -389,7 +389,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-[#34495E] text-white">
+        <section id="contact" className="w-full py-8 md:py-16 lg:py-20 bg-[#34495E] text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
