@@ -1,8 +1,8 @@
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft, ArrowRight, Database } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
+import { CaseStudiesGrid } from "@/components/case-studies-grid"
 
 export default function CaseStudies() {
   // Sample case studies data
@@ -12,18 +12,12 @@ export default function CaseStudies() {
       title: "Serving Up Insights: How we built a top-notch data platform for PlayYourCourt",
       description: "Learn how we helped PlayYourCourt gain visibility into their business metrics and save $150K annually through data-driven decisions.",
       industry: "SaaS • Sports Tech",
-      image: "/logos/playyourcourt.avif",
+      video: "play_your_court.mp4",
       metrics: [
         { label: "Annual Savings", value: "$150K+" },
         { label: "Forecast Accuracy", value: "98%" },
         { label: "Time to Value", value: "90 days" }
-      ],
-      stack: ["Stitch", "Fivetran", "Snowflake", "dbt Cloud", "Sigma"],
-      testimonial: {
-        quote: `[Boston Data Co] solved data specific problems we've been trying to solve for nearly a decade. This relationship was the unlock for our business to get the information we need to scale.`,
-        author: `Scott Baxter`,
-        role: `CEO and Founder`
-      }
+      ]
     }
   ]
 
@@ -60,49 +54,7 @@ export default function CaseStudies() {
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="mb-10">
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {caseStudies.map((study) => (
-                  <Link href={`/case-studies/${study.id}`} key={study.id}>
-                    <div className="group relative flex flex-col overflow-hidden rounded-lg border bg-background shadow-md transition-all hover:shadow-xl">
-                      <div className="relative aspect-video overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]"></div>
-                        <Image
-                          src={study.image}
-                          width={600}
-                          height={400}
-                          alt={study.title}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                        />
-                        <div className="absolute bottom-3 left-3 z-20">
-                          <span className="inline-block rounded-full bg-primary/90 px-2.5 py-0.5 text-xs font-medium text-white">
-                            {study.industry}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex flex-1 flex-col justify-between p-6">
-                        <div>
-                          <h3 className="text-xl font-bold">{study.title}</h3>
-                          <p className="mt-2 text-sm text-muted-foreground">{study.description}</p>
-                          <div className="mt-4 grid grid-cols-3 gap-4">
-                            {study.metrics.map((metric) => (
-                              <div key={metric.label} className="text-center">
-                                <div className="text-lg font-bold text-primary">{metric.value}</div>
-                                <div className="text-xs text-muted-foreground">{metric.label}</div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="mt-6 flex items-center">
-                          <span className="text-sm font-medium text-primary group-hover:underline">
-                            Read Case Study
-                          </span>
-                          <ArrowRight className="ml-1 h-4 w-4 text-primary" />
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+              <CaseStudiesGrid caseStudies={caseStudies} />
             </div>
           </div>
         </section>
@@ -168,11 +120,9 @@ export default function CaseStudies() {
               <div className="relative mt-8 lg:mt-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
                 <div className="relative rounded-xl overflow-hidden border shadow-xl">
-                  <Image
+                  <img
                     src="/placeholder.svg?height=800&width=600"
-                    width={600}
-                    height={800}
-                    alt="Dave Aaron"
+                    alt="Process visualization"
                     className="w-full object-cover"
                   />
                 </div>

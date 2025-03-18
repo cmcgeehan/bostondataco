@@ -135,6 +135,31 @@ const getCaseStudy = (id: string) => {
       videoUrl: "#",
       dashboardImage: "/case-studies/bigquery-dashboard.jpg",
     },
+    {
+      id: "playyourcourt",
+      title: "Serving Up Insights: How we built a top-notch data platform for PlayYourCourt",
+      description: "Learn how we helped PlayYourCourt gain visibility into their business metrics and save $150K annually through data-driven decisions.",
+      industry: "SaaS • Sports Tech",
+      image: "/case-studies/sigma-analytics.jpg",
+      challenge:
+        "PlayYourCourt needed a modern data infrastructure to gain better visibility into their business metrics and make data-driven decisions. Their existing setup was fragmented and lacked proper integration.",
+      solution:
+        "We implemented a comprehensive data stack using Stitch for data integration, Snowflake for data warehousing, dbt for data transformation, and Sigma for business intelligence. This enabled seamless data flow from various sources into actionable insights.",
+      results: [
+        "$150K+ in annual savings through optimized operations",
+        "98% forecast accuracy for business planning",
+        "90 days from project start to value realization",
+        "Improved decision-making across all departments"
+      ],
+      testimonial: {
+        quote:
+          "Boston Data Co. transformed how we use data at PlayYourCourt. Their implementation of our modern data stack has given us unprecedented visibility into our business metrics.",
+        author: "John Smith",
+        title: "Head of Operations at PlayYourCourt"
+      },
+      videoUrl: "/case-studies/play_your_court.mp4",
+      dashboardImage: "/case-studies/sigma-analytics-dashboard.jpg"
+    },
   ]
 
   return caseStudies.find((study) => study.id === id)
@@ -147,6 +172,7 @@ export async function generateStaticParams() {
     { id: "snowflake-migration" },
     { id: "fivetran-etl" },
     { id: "bigquery-analytics" },
+    { id: "playyourcourt" }
   ]
 }
 
@@ -208,7 +234,15 @@ export default async function CaseStudyPage({
         <section className="w-full">
           <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
             <div className="absolute inset-0 bg-black/50 z-10"></div>
-            <Image src={caseStudy.image || "/placeholder.svg"} fill alt={caseStudy.title} className="object-cover" />
+            <video
+              muted
+              autoPlay
+              loop
+              className="absolute inset-0 h-full w-full object-cover"
+            >
+              <source src={caseStudy.videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div className="container relative z-20 h-full flex flex-col justify-center px-4 md:px-6 text-white">
               <div className="max-w-3xl">
                 <div className="inline-block rounded-full bg-[#343e53] px-3 py-1 text-xs font-medium mb-4">
