@@ -55,7 +55,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
                 <div className="relative rounded-xl overflow-hidden border shadow-xl">
                   <Image
-                    src="/sigmaExample.png"
+                    src="/sigmaexample.png"
                     width={800}
                     height={600}
                     alt="Data visualization dashboard"
@@ -171,7 +171,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                   <Image
-                    src="/sigmaExample.png"
+                    src="/sigmaexample.png"
                     width={64}
                     height={64}
                     alt="Dave Aaron"
@@ -189,7 +189,7 @@ export default function Home() {
                   <div className="grid gap-4">
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/sigmaExample.png"
+                        src="/sigmaexample.png"
                         width={400}
                         height={300}
                         alt="Data team collaboration"
@@ -198,7 +198,7 @@ export default function Home() {
                     </div>
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/sigmaExample.png"
+                        src="/sigmaexample.png"
                         width={300}
                         height={300}
                         alt="Data visualization"
@@ -209,7 +209,7 @@ export default function Home() {
                   <div className="grid gap-4">
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/sigmaExample.png"
+                        src="/sigmaexample.png"
                         width={300}
                         height={300}
                         alt="Team meeting"
@@ -218,7 +218,7 @@ export default function Home() {
                     </div>
                     <div className="overflow-hidden rounded-lg">
                       <Image
-                        src="/sigmaExample.png"
+                        src="/sigmaexample.png"
                         width={400}
                         height={300}
                         alt="Data dashboard"
@@ -532,7 +532,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-3xl rounded-3xl"></div>
                 <div className="relative rounded-xl overflow-hidden border shadow-xl">
                   <Image
-                    src="/sigmaExample.png"
+                    src="/sigmaexample.png"
                     width={800}
                     height={600}
                     alt="Data visualization dashboard"
