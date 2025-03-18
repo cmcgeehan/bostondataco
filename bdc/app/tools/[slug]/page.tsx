@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, ArrowRight, ChevronRight, Database, Play } from "lucide-react"
+import { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
 
@@ -196,8 +197,31 @@ const getToolData = (slug: string) => {
   return tools[slug as keyof typeof tools]
 }
 
-export default function ToolPage({ params }: { params: { slug: string } }) {
-  const tool = getToolData(params.slug)
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const resolvedParams = await params
+  const tool = getToolData(resolvedParams.slug)
+  
+  if (!tool) {
+    return {
+      title: 'Tool Not Found | Boston Data Co.',
+    }
+  }
+
+  return {
+    title: `${tool.name} | Boston Data Co.`,
+    description: tool.description,
+  }
+}
+
+export default async function ToolPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const resolvedParams = await params
+  const tool = getToolData(resolvedParams.slug)
 
   if (!tool) {
     return (
@@ -373,8 +397,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
                 <div className="rounded-lg border p-6">
                   <h3 className="text-lg font-bold mb-4">Ready to get started with {tool.name}?</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Let's discuss how we can help you implement {tool.name} to transform your data infrastructure and
-                    decision-making processes.
+                    Let&apos;s discuss how we can help you leverage {tool.name} for your business.
                   </p>
                   <Link href="/#contact">
                     <Button className="w-full bg-[#343e53] hover:bg-[#343e53]/90">Schedule a Consultation</Button>
@@ -394,7 +417,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">See {tool.name} in Action</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Explore how we've helped businesses leverage {tool.name} to transform their data infrastructure.
+                  Explore how we&apos;ve helped businesses leverage {tool.name} to transform their data infrastructure.
                 </p>
               </div>
             </div>
@@ -458,7 +481,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
                   Ready to Transform Your Data with {tool.name}?
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Let's discuss how we can help you implement {tool.name} to drive better business decisions.
+                  Let&apos;s discuss how we can help you implement {tool.name} to drive better business decisions.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">

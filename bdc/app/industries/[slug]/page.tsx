@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, ArrowRight, ChevronRight, Database, Play } from "lucide-react"
+import { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
 
@@ -242,8 +243,31 @@ const getIndustryData = (slug: string) => {
   return industries[slug as keyof typeof industries]
 }
 
-export default function IndustryPage({ params }: { params: { slug: string } }) {
-  const industry = getIndustryData(params.slug)
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const resolvedParams = await params
+  const industry = getIndustryData(resolvedParams.slug)
+  
+  if (!industry) {
+    return {
+      title: 'Industry Not Found | Boston Data Co.',
+    }
+  }
+
+  return {
+    title: `${industry.name} | Boston Data Co.`,
+    description: industry.description,
+  }
+}
+
+export default async function IndustryPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const resolvedParams = await params
+  const industry = getIndustryData(resolvedParams.slug)
 
   if (!industry) {
     return (
@@ -426,7 +450,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
                 <div className="rounded-lg border p-6">
                   <h3 className="text-lg font-bold mb-4">Ready to transform your {industry.name} data?</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Let's discuss how we can help you leverage your data for competitive advantage in the{" "}
+                    Let&apos;s discuss how we can help you leverage your data for competitive advantage in the{" "}
                     {industry.name} industry.
                   </p>
                   <Link href="/#contact">
@@ -447,7 +471,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Our Work in {industry.name}</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Explore how we've helped {industry.name} organizations transform their data infrastructure.
+                  Explore how we&apos;ve helped {industry.name} organizations transform their data infrastructure.
                 </p>
               </div>
             </div>
@@ -506,7 +530,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
                   Ready to Transform Your {industry.name} Data?
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Let's discuss how we can help you leverage your data for competitive advantage in the {industry.name}{" "}
+                  Let&apos;s discuss how we can help you leverage your data for competitive advantage in the {industry.name}{" "}
                   industry.
                 </p>
               </div>

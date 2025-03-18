@@ -151,7 +151,7 @@ export default function ToolsPage() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">The Modern Data Stack</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  We've carefully selected best-in-class tools that work together seamlessly to create a powerful,
+                  We&apos;ve carefully selected best-in-class tools that work together seamlessly to create a powerful,
                   scalable data infrastructure.
                 </p>
               </div>
@@ -204,7 +204,7 @@ export default function ToolsPage() {
                   Ready to Transform Your Data Infrastructure?
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Let's discuss how we can help you implement the right tools for your business needs.
+                  Let&apos;s discuss how we can help you leverage these tools for your business.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">

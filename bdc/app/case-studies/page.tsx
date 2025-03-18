@@ -154,7 +154,7 @@ export default function CaseStudies() {
                   Our Data Success Stories
                 </h1>
                 <p className="max-w-[900px] text-white/80 md:text-xl">
-                  Explore how we've helped businesses across industries transform their data infrastructure and
+                  Explore how we&apos;ve helped businesses across industries transform their data infrastructure and
                   decision-making processes.
                 </p>
               </div>
@@ -319,7 +319,7 @@ export default function CaseStudies() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Ready to Write Your Success Story?</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Let's discuss how we can help you transform your data infrastructure and decision-making processes.
+                  We&apos;ve helped businesses across industries transform their data infrastructure.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">

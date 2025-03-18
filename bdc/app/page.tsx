@@ -89,7 +89,7 @@ export default function Home() {
                   <Database className="h-10 w-10 text-[#343e53]" />
                   <h3 className="text-2xl font-bold">Data Buildout</h3>
                   <p className="text-muted-foreground">
-                    We take your data infrastructure from 0 to 1, or 1 to 2, implementing our "modern data special"
+                    We take your data infrastructure from 0 to 1, or 1 to 2, implementing our &quot;modern data special&quot;
                     stack:
                   </p>
                   <ul className="space-y-2 text-sm">
@@ -121,7 +121,7 @@ export default function Home() {
                   <Users className="h-10 w-10 text-[#343e53]" />
                   <h3 className="text-2xl font-bold">Fractional Data Support</h3>
                   <p className="text-muted-foreground">
-                    Ongoing support with your business's data needs, available in flexible arrangements:
+                    Ongoing support with your business&apos;s data needs, available in flexible arrangements:
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
@@ -157,8 +157,8 @@ export default function Home() {
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Founded on Data-Driven Principles</h2>
                   <blockquote className="border-l-4 border-[#343e53] pl-4 italic text-muted-foreground">
-                    "We're big believers in the power of data, and that every organization should be making decisions
-                    informed by accurate and insightful data."
+                    &quot;We&apos;re big believers in the power of data, and that every organization should be making decisions
+                    informed by accurate and insightful data.&quot;
                   </blockquote>
                 </div>
                 <p className="text-muted-foreground">
@@ -241,7 +241,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Trusted by Innovative Companies</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  We've helped businesses across industries harness the power of their data.
+                  We&apos;ve helped businesses across industries harness the power of their data.
                 </p>
               </div>
             </div>
@@ -277,7 +277,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">What Our Clients Say</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Don't just take our word for it. Here's what our clients have to say about working with Boston Data
+                  Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with Boston Data
                   Co.
                 </p>
               </div>
@@ -291,7 +291,7 @@ export default function Home() {
                   logo: "/logos/abridge.avif"
                 },
                 {
-                  quote: "Dave and the Boston Data Company are everything that you want in an agency. They are proactive, they are extremely smart. I could not be happier with my decision to work with them to built out all of my agency's dashboards. They don't just do the work; they provide that extra layer of consultative guidance, which is so important. Couldn't say anything but great things.",
+                  quote: "Dave and the Boston Data Company are everything that you want in an agency. They are proactive, they are extremely smart. I could not be happier with my decision to work with them to built out all of my agency&apos;s dashboards. They don&apos;t just do the work; they provide that extra layer of consultative guidance, which is so important. Couldn&apos;t say anything but great things.",
                   author: "Jake Schmidt",
                   title: "CEO at Structured",
                   logo: "/logos/structured.avif"
@@ -309,7 +309,7 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative space-y-4">
-                    <div className="text-4xl text-[#343e53]/20">"</div>
+                    <div className="text-4xl text-[#343e53]/20">&quot;</div>
                     <p className="text-muted-foreground line-clamp-6 hover:line-clamp-none transition-all duration-300">{testimonial.quote}</p>
                     <div className="flex items-center gap-4 pt-4">
                       <Image
@@ -340,7 +340,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Our Work in Action</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  See how we've helped businesses transform their data infrastructure and decision-making processes.
+                  See how we&apos;ve helped businesses transform their data infrastructure and decision-making processes.
                 </p>
               </div>
               <div className="flex items-center gap-2 pt-4">
@@ -366,7 +366,7 @@ export default function Home() {
                   ],
                   stack: ["Stitch", "Fivetran", "Snowflake", "dbt Cloud", "Sigma"],
                   testimonial: {
-                    quote: "[Boston Data Co] solved data specific problems we've been trying to solve for nearly a decade. This relationship was the unlock for our business to get the information we need to scale.",
+                    quote: "[Boston Data Co] solved data specific problems we&apos;ve been trying to solve for nearly a decade. This relationship was the unlock for our business to get the information we need to scale.",
                     author: "Scott Baxter",
                     role: "CEO and Founder"
                   }
@@ -445,7 +445,7 @@ export default function Home() {
                       )}
                       {study.testimonial && (
                         <blockquote className="mt-4 border-l-2 border-[#343e53]/20 pl-4 italic text-sm text-muted-foreground">
-                          "{study.testimonial.quote}"
+                          &quot;{study.testimonial.quote}&quot;
                           <footer className="mt-2 text-xs font-medium">
                             {study.testimonial.author}, {study.testimonial.role}
                           </footer>
@@ -477,7 +477,7 @@ export default function Home() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Ready to Transform Your Data?</h2>
                 <p className="max-w-[900px] text-white/80 md:text-xl">
-                  If you're looking to establish your data practice or enhance your existing one, we'd love to hear from
+                  If you&apos;re looking to establish your data practice or enhance your existing one, we&apos;d love to hear from
                   you.
                 </p>
               </div>
@@ -541,7 +541,7 @@ export default function Home() {
                     </div>
                     <h3 className="font-bold">Expand Your Analytics</h3>
                     <p className="text-sm text-muted-foreground">
-                    Once the foundation is built, we'll help take your analytics to the next level. From identifying users about to churn, forecasting units sold, or automating your business review reporting- the possibilities are endless!
+                    Once the foundation is built, we&apos;ll help take your analytics to the next level. From identifying users about to churn, forecasting units sold, or automating your business review reporting- the possibilities are endless!
                     </p>
                   </div>
                   <div className="flex flex-col space-y-2">

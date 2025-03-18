@@ -207,7 +207,7 @@ export default function IndustriesPage() {
                   Ready to Transform Your Industry Data?
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Let's discuss how we can help you leverage your data for competitive advantage in your industry.
+                  Let&apos;s discuss how we can help you leverage your data for competitive advantage in your industry.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">

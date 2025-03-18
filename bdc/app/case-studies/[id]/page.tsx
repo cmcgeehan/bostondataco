@@ -1,3 +1,6 @@
+'use server'
+
+import type { Metadata } from 'next'
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Database, Play } from "lucide-react"
@@ -112,8 +115,40 @@ const getCaseStudy = (id: string) => {
   return caseStudies.find((study) => study.id === id)
 }
 
-export default function CaseStudyPage({ params }: { params: { id: string } }) {
-  const caseStudy = getCaseStudy(params.id)
+export async function generateStaticParams() {
+  return [
+    { id: "ecommerce-analytics" },
+    { id: "healthcare-infrastructure" },
+    { id: "saas-customer-insights" },
+    { id: "fintech-data-modernization" },
+  ]
+}
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ id: string }> }
+): Promise<Metadata> {
+  const resolvedParams = await params
+  const caseStudy = getCaseStudy(resolvedParams.id)
+  
+  if (!caseStudy) {
+    return {
+      title: 'Case Study Not Found | Boston Data Co.',
+    }
+  }
+
+  return {
+    title: `${caseStudy.title} | Boston Data Co.`,
+    description: caseStudy.description,
+  }
+}
+
+export default async function CaseStudyPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const resolvedParams = await params
+  const caseStudy = getCaseStudy(resolvedParams.id)
 
   if (!caseStudy) {
     return (
@@ -257,7 +292,7 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
                 <div className="rounded-lg border bg-slate-50 p-6">
                   <h3 className="text-lg font-bold mb-4">Client Testimonial</h3>
                   <div className="space-y-4">
-                    <p className="italic text-muted-foreground">"{caseStudy.testimonial.quote}"</p>
+                    <p className="italic text-muted-foreground">&ldquo;{caseStudy.testimonial.quote}&rdquo;</p>
                     <div className="flex items-center gap-4">
                       <Image
                         src="/placeholder.svg?height=50&width=50"
@@ -289,7 +324,7 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
                 <div className="rounded-lg border p-6">
                   <h3 className="text-lg font-bold mb-4">Ready to achieve similar results?</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Let's discuss how we can help you transform your data infrastructure and decision-making processes.
+                    Let&apos;s discuss how we can help you transform your data infrastructure and decision-making processes.
                   </p>
                   <Link href="/#contact">
                     <Button className="w-full bg-[#343e53] hover:bg-[#343e53]/90">Contact Us</Button>
@@ -306,7 +341,7 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Explore More Case Studies</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Discover how we've helped other businesses transform their data infrastructure.
+                  We&apos;ve helped businesses transform their data infrastructure.
                 </p>
               </div>
             </div>
@@ -338,7 +373,7 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
                   image: "/placeholder.svg?height=400&width=600",
                 },
               ]
-                .filter((study) => study.id !== params.id)
+                .filter((study) => study.id !== resolvedParams.id)
                 .slice(0, 3)
                 .map((study) => (
                   <Link href={`/case-studies/${study.id}`} key={study.id}>
