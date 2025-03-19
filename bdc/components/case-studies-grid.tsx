@@ -30,12 +30,14 @@ export function CaseStudiesGrid({ caseStudies }: CaseStudiesGridProps) {
         >
           <div className="relative aspect-video overflow-hidden">
             <div className="absolute inset-0 z-10 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
-              <Button
-                variant="outline"
-                className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
-              >
-                Read Full Case Study
-              </Button>
+              <Link href={`/case-studies/${study.id}`}>
+                <Button
+                  variant="outline"
+                  className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                >
+                  Read Full Case Study
+                </Button>
+              </Link>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]"></div>
             <video

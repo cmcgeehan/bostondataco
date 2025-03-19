@@ -302,6 +302,7 @@ export default function Home() {
             <div className="mx-auto grid max-w-6xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
+                  id: "playyourcourt",
                   title: "Serving Up Insights: How we built a top-notch data platform for PlayYourCourt",
                   description:
                     "Learn how we helped PlayYourCourt gain visibility into their business metrics and save $150K annually through data-driven decisions.",
@@ -326,12 +327,14 @@ export default function Home() {
                 >
                   <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 z-10 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
-                      <Button
-                        variant="outline"
-                        className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
-                      >
-                        Read Full Case Study
-                      </Button>
+                      <Link href={`/case-studies/${study.id}`}>
+                        <Button
+                          variant="outline"
+                          className="bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                        >
+                          Read Full Case Study
+                        </Button>
+                      </Link>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-[5]"></div>
                     <video
@@ -382,7 +385,7 @@ export default function Home() {
                       )}
                     </div>
                     <div className="mt-6 flex items-center">
-                      <Link href="#" className="text-sm font-medium text-[#34495E] hover:underline">
+                      <Link href={`/case-studies/${study.id}`} className="text-sm font-medium text-[#34495E] hover:underline">
                         Read Case Study
                         <ArrowRight className="ml-1 inline-block h-4 w-4" />
                       </Link>
